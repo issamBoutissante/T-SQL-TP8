@@ -83,5 +83,16 @@ end
 exec GetnumProp '2020-01-01','2021-02-01'
 --5.	Créer la procédure GetProp qui donne le nom et le nas des propriétaires
 -- qui ont fait deux accidents dans un intervalle de 4 mois.
-create procedure GetProp()
+create procedure GetProp
 as
+begin
+    declare @nbLignes int;
+	select @nbLignes=count(*) from Accident;
+	declare @i int=1;
+	while(@i<=@nbLignes)
+	  begin
+	     
+	     set @i=@i+1
+	  end
+end
+select NP from Accident
